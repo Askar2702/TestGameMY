@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class OceanManager : MonoBehaviour
@@ -12,15 +13,15 @@ public class OceanManager : MonoBehaviour
     private Texture2D _textureOcean;
     void Awake()
     {
-        _mat = _ocean.GetComponent<Renderer>().material;
-        _textureOcean = (Texture2D)_mat.GetTexture("_Water");
+        _mat = _ocean.GetComponent<MeshRenderer>().material;
+        _textureOcean = (Texture2D)_mat.GetTexture("_oceanTexture");
     }
+   
 
     public float WaterHeightAtPos(Vector3 pos)
     {
         return _ocean.position.y + _textureOcean.GetPixelBilinear(pos.x + _wavesFrequency, pos.z + _wavesFrequency + Time.time * _wavesSpeed).g
             * _wavesHeight * _ocean.localScale.x;
-
     }
     private void OnValidate()
     {

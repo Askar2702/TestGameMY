@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class FloatingObject : MonoBehaviour
 {
-    public float PowerFloating => _floatingPower;
     [SerializeField] private Transform[] _floaters;
     [SerializeField] private float _underWaterDrag = 3f;
     [SerializeField] private float _underWaterAngularDrag = 1f;
@@ -16,17 +16,19 @@ public class FloatingObject : MonoBehaviour
     private bool _isUnderWater;
     private OceanManager _ocean;
 
-    private void Start()
+    private void Awake()
     {
         _ocean = FindObjectOfType<OceanManager>();
     }
-
+    
     void FixedUpdate()
     {
         _floatersUnderWater = 0;
+
         for (int i = 0; i < _floaters.Length; i++)
         {
             float difference = _floaters[i].position.y - _ocean.WaterHeightAtPos(_floaters[i].position);
+
             if (difference < 0)
             {
                 _rb.AddForceAtPosition(Vector3.up * _floatingPower * Mathf.Abs(difference), _floaters[i].position, ForceMode.Force);
@@ -38,8 +40,9 @@ public class FloatingObject : MonoBehaviour
                     SwichState(true);
                 }
             }
-            
+
         }
+
 
         if (_isUnderWater && _floatersUnderWater == 0)
         {
@@ -61,8 +64,5 @@ public class FloatingObject : MonoBehaviour
         }
     }
 
-    public void FloatingPoweUp()
-    {
-        _floatingPower += 10;
-    }
+   
 }

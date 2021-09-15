@@ -1314,7 +1314,7 @@
 }
 
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
     "m_ObjectId": "1051a4ee749be287acf6562f188a2c45",
     "m_Guid": {
@@ -1829,7 +1829,7 @@
 }
 
 {
-    "m_SGVersion": 2,
+    "m_SGVersion": 3,
     "m_Type": "UnityEditor.ShaderGraph.Internal.ColorShaderProperty",
     "m_ObjectId": "3287720cf6928c8880608aa5366001d7",
     "m_Guid": {
@@ -5183,9 +5183,9 @@
     "m_Guid": {
         "m_GuidSerialized": "c7afc882-7a8a-479c-82a4-cd59bcfd9f06"
     },
-    "m_Name": "_OceanTexture",
+    "m_Name": "OceanTexture",
     "m_DefaultReferenceName": "Texture2D_ce18bdc9dfbe4e05a6ca98635447e963",
-    "m_OverrideReferenceName": "",
+    "m_OverrideReferenceName": "_oceanTexture",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
@@ -5889,7 +5889,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "e24012fb366a4ccf8f9afe454ffc88a6",
     "m_Id": 0,
-    "m_DisplayName": "_OceanTexture",
+    "m_DisplayName": "OceanTexture",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",

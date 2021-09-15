@@ -999,7 +999,7 @@
     "m_Type": "UnityEditor.ShaderGraph.Texture2DMaterialSlot",
     "m_ObjectId": "01444fb9bb2040749a3409ee2c0f519a",
     "m_Id": 0,
-    "m_DisplayName": "Ocean",
+    "m_DisplayName": "OceanTexture",
     "m_SlotType": 1,
     "m_Hidden": false,
     "m_ShaderOutputName": "Out",
@@ -1510,9 +1510,9 @@
     "m_Guid": {
         "m_GuidSerialized": "ff9642ad-c01d-449d-b1c4-b59d312ad20e"
     },
-    "m_Name": "Ocean",
+    "m_Name": "OceanTexture",
     "m_DefaultReferenceName": "Texture2D_21b372d63dbb46e89b6ceb003f526585",
-    "m_OverrideReferenceName": "_Water",
+    "m_OverrideReferenceName": "_oceanTexture",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
